@@ -94,6 +94,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseDefaultFiles();       // <-- Serve index.html by default
+app.UseStaticFiles(); 
+
 app.UseCors("AllowSpecificOrigin");
 
 app.UseHttpsRedirection();
@@ -103,5 +106,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapFallbackToFile("index.html");
 
 app.Run();
