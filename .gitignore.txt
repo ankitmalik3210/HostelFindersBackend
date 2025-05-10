@@ -1,0 +1,8 @@
+bin/
+obj/
+*.dll
+*.exe
+*.user
+*.suo
+*.SQLite
+.vs/
